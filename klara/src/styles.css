@@ -1,0 +1,62 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f8f3f8;
+  color: #333;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.header {
+  background-color: #f4d3e2;
+  color: #555;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.days-counter {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #a64d79;
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  background-color: #e3d4db;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+.tabs button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.tabs button.active {
+  background-color: #f4d3e2;
+  font-weight: bold;
+}
+
+.tab-content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+section {
+  text-align: center;
+}
+
+h2 {
+  color: #a64d79;
+}
