@@ -3,6 +3,7 @@ body {
   font-family: Arial, sans-serif;
   background-color: #f8f3f8;
   color: #333;
+  overflow: hidden;
 }
 
 .app {
@@ -59,4 +60,59 @@ section {
 
 h2 {
   color: #a64d79;
+}
+
+.image-container {
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.cropped-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Animação de corações */
+.hearts-animation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1000;
+}
+
+.heart {
+  position: absolute;
+  width: 10px;
+  height: 13px;
+  background: url("https://cdn-icons-png.flaticon.com/512/833/833472.png")
+    no-repeat;
+  background-size: contain;
+  animation: hearts-spin 5s linear infinite;
+  opacity: 0.8;
+}
+
+.heart:nth-child(odd) {
+  animation-duration: 4s;
+}
+
+.heart:nth-child(even) {
+  animation-duration: 6s;
+}
+
+@keyframes hearts-spin {
+  0% {
+    transform: translateY(-10%) rotate(0deg);
+    left: calc(10% + 80% * var(--random-x));
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    left: calc(10% + 80% * var(--random-x));
+  }
 }
